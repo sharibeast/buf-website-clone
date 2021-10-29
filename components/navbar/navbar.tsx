@@ -9,15 +9,12 @@ export default function Navbar(): JSX.Element {
   const [show, setShow] = useState(false);
   return (
     <>
-      <Head>
-        <title>Buf | The CLI</title>
-      </Head>
       <header>
         <nav className="flex items-center justify-between p-4 md:p-12">
           <div>
             <Image src={Logo} alt="logo" />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ul className="flex">
               <li className="mx-3 py-3 text-lg uppercase hover:text-blue-600 hover:border-blue-600  transition-all duration-200 text-gray-700">
                 product
@@ -50,7 +47,7 @@ export default function Navbar(): JSX.Element {
           </div>
           <button
             onClick={() => setShow(!show)}
-            className="p-2 border-2 md:hidden"
+            className="p-2 border-2 lg:hidden"
           >
             <div className="flex items-center">
               <Image src={menu} alt="menu" />
@@ -58,7 +55,7 @@ export default function Navbar(): JSX.Element {
             </div>
           </button>
         </nav>
-        {show && <MobileNav />}
+        {show && <MobileNav show={show} />}
       </header>
     </>
   );

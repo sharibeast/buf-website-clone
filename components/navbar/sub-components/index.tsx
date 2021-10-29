@@ -30,9 +30,11 @@ export const MobileNavData = [
     name: 'careers',
   },
 ];
-export const MobileNav = (): JSX.Element => {
+export const MobileNav = (show: any): JSX.Element => {
   return (
-    <nav className="md:hidden">
+    <nav
+      className={` ${show} ? lg:hidden h-0' : 'lg:hidden h-screen z-20  transition-all duration-500`}
+    >
       <div className="z-10 w-full p-6">
         <div>
           <ul>
@@ -43,7 +45,7 @@ export const MobileNav = (): JSX.Element => {
             {MobileNavData.map((navlink) => (
               <li
                 key={navlink.id}
-                className="text-blue-700 border-b-2 py-3 border-blue-700 uppercase text-2xl"
+                className="text-blue-700 border-b-2  py-3 border-blue-700 uppercase text-2xl"
               >
                 <a href="#">{navlink.name}</a>
               </li>
