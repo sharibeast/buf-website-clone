@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MobileNav } from './sub-components';
+import { MobileNav } from './sub-components/mobileNav';
 import Logo from '../../public/assets/logo.svg';
 import menu from '../../public/assets/menu.svg';
 import Image from 'next/image';

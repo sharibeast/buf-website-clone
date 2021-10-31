@@ -21,6 +21,12 @@ module.exports = {
       bluetextbluf: {
         DEFAULT: '#36375E',
       },
+      graybluf: {
+        DEFAULT: '#adb5bd',
+      },
+      graybluf2: {
+        DEFAULT: '#7e9194',
+      },
     },
     extend: {},
   },
